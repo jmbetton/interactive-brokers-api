@@ -5,9 +5,7 @@ from ibapi.wrapper import EWrapper
 from ibapi.contract import Contract
 from ibapi.order import Order
 
-"""Building an object that inherits networking machinery from two parent classes, 
-overriding two of the parent's empty callback methods with our own versions, 
-and using a thread-safe flag so the background thread can wake up the main thread when TWS delivers the order ID."""
+
 
 class IBKRApp(EWrapper, EClient): # IBKRApp class inherits from both EWrapper and Eclient parent classes
     def __init__(self):
