@@ -9,7 +9,7 @@ if __name__ == '__main__':
     app = connect_to_tws()
 
     contract = make_stock_contract('F')
-    order = make_limit_order('BUY', 1, 5.00)   # far below market — rests unfilled
+    order = make_limit_order('BUY', 1, 5.00)   # far below market rests unfilled
 
     order_id = app.next_order_id
     app.placeOrder(order_id, contract, order)

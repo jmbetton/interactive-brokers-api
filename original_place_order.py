@@ -21,7 +21,7 @@ class IBKRApp(EWrapper, EClient): # IBKRApp class inherits from both EWrapper an
         if errorCode not in (2104, 2106, 2158):
             print(f'Error {errorCode}: {errorString}')
     
-    # add callbacks to IBKRApp to watch the order unfold
+    # add callbacks to IBKRApp 
     def orderStatus(self, orderId, status, filled, remaining, avgFillPrice, permId,
                     parentId, lastFillPrice, clientId, whyHeld, mktCapPrice):
         print(f'Order {orderId}: {status} | filled: {filled} @ avg {avgFillPrice}')
